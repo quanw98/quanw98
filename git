@@ -1,0 +1,8 @@
+//  git remote add < shortname > <url>
+  0. git init    // 
+  1.  git remote add origin  https://gitee.com/zd1231230/in.git   // 关联远程仓库
+  2.0  git push --set-upstream origin newFetch 提交到远程仓库
+  2.1   git pull https://gitee.com/zd1231230/in.git master  拉取仓库到主分支
+  3. newFetch
+  4.   git commit -a -m "初始化"
+  5. push
