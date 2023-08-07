@@ -1,0 +1,12 @@
+   for(int i = 0;i < n; i++)
+    {
+        Count += inner_product(a[i], b[i]); 
+    }
+    
+    cout << " " << Count << endl;
+}
+​
+int main()
+{
+    test();
+    return 0;
