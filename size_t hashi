@@ -1,0 +1,26 @@
+bool insert(const pair<K, V>& kv)
+		{
+			if (_n == _tables.size())
+			{
+				size_t newsize = _tables.size() == 0 ? 10 : 2 * _tables.size();
+				vector<Node*> newtable(newsize, nullptr);
+				for (auto& cur : _tables)
+				{
+					while (cur)
+					{
+						Node* next = cur->_next;
+						size_t hashi = cur->_kv.first % newtable.size();
+						cur->_next = newtable[hashi];
+						newtable[hashi] = cur;
+						cur = next;
+					}
+				}
+				_tables.swap(newtable);
+			}
+			size_t hashi = kv.first % _tables.size();
+			Node* newnode = new Node(kv);
+			newnode->_next = _tables[hashi];
+			_tables[hashi] = newnode;
+			++_n;
+			return true;
+		}
