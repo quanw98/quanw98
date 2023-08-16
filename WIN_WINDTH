@@ -1,0 +1,29 @@
+void fly()
+{
+for(int i = 0 ;i <3 ;i++)
+{
+    // same speed
+    bgX[i] -= 2;
+    if(bgX[i] < -WIN_WINDTH)
+    {
+        bgX[i] = 0;
+    }
+    
+}
+ 
+    
+    //实现跳跃
+    if(heroJump)
+    {
+        
+        
+		if(heroY > JumpHeightMax)
+        {
+				//上升
+             heroJumpOff = 4;
+            
+        }
+        
+      heroY += heroJumpOff;
+        
+
