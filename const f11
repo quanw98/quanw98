@@ -1,0 +1,38 @@
+},
+					newText: `
+const f = () => {
+	return (
+		<div></div>
+	)
+}
+
+export default f
+					`
+				}
+			}
+		]
+	}
+	return [
+		{
+			label: 'MinoMino',
+			kind: CompletionItemKind.Text,
+			data: 3,
+			sortText: 'b',
+			filterText: 'hello',
+			textEdit: {
+				range: {
+					start: textRange,
+					end: textRange
+				},
+				newText: 'Hello World'
+			}
+		},
+		{
+			label: 'MinoMin',
+			kind: CompletionItemKind.Text,
+			sortText: 'a',
+			filterText: 'hello'
+		}
+	];
+}
+);
